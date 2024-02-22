@@ -1,0 +1,7 @@
+set_property IOSTANDARD LVCMOS33 [get_ports {hex[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {hex[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {hex[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {hex[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports an]
+set_property IOSTANDARD LVCMOS33 [get_ports s]
+set_property IOSTANDARD LVCMOS33 [get_ports sw]

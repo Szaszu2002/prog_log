@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1708006706">
+  <File Type="ROUTE-PWR" Name="hetsegments_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hetsegments.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="hetsegments_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hetsegments_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="hetsegments_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="hetsegments.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hetsegments_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hetsegments_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="hetsegments_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="hetsegments_opt.dcp"/>
+  <File Type="OPT-DRC" Name="hetsegments_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hetsegments.hwdef"/>
+  <File Type="PWROPT-DCP" Name="hetsegments_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="hetsegments_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="hetsegments_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="hetsegments_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hetsegments_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hetsegments_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hetsegments_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hetsegments_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hetsegments_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hetsegments_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hetsegments_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="hetsegments.bin"/>
+  <File Type="PLACE-TIMING" Name="hetsegments_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="hetsegments_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="hetsegments_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hetsegments_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="hetsegments.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hetsegments_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="hetsegments_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="hetsegments_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="hetsegments.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="hetsegments_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hetsegments_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hetsegments_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hetsegments_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hetsegments_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hetsegments_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="hetsegments_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hetsegments_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hetsegments_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hetsegments_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="hetsegments_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="hetsegments_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hetsegments_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hetsegments_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hetsegments_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hetsegments_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="hetsegments_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="hetsegments_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="hetsegments_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="hetsegments_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="hetsegments_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hetsegments_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hetsegments_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hetsegments_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hetsegments_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hetsegments_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="hetsegments_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="hetsegments.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="hetsegments_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="hetsegments_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="hetsegments.nky"/>
+  <File Type="BITSTR-BMM" Name="hetsegments_bd.bmm"/>
+  <File Type="PDI-FILE" Name="hetsegments.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="hetsegments_soc.pdi"/>
+  <File Type="PL-PDI-FILE" Name="hetsegments_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="hetsegments.rcfi"/>
+  <File Type="CFI_FILE" Name="hetsegments.cfi"/>
+  <File Type="RNPI_FILE" Name="hetsegments.rnpi"/>
+  <File Type="NPI_FILE" Name="hetsegments.npi"/>
+  <File Type="RBD_FILE" Name="hetsegments.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="hetsegments.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="hetsegments.sysdef"/>
+  <File Type="BG-BGN" Name="hetsegments.bgn"/>
+  <File Type="BG-DRC" Name="hetsegments.drc"/>
+  <File Type="RDI-RDI" Name="hetsegments.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="hetsegments_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="hetsegments_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/7segment.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hetsegments"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/nexys4ddr_2.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/nexys4ddr_2.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/hetsegments.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

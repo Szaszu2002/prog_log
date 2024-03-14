@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Mar  7 15:50:48 2024
+# Process ID: 17304
+# Current directory: C:/Users/au087680/Desktop/-p/gyak2/gyak2/gyak2.runs/design_1_PWM_0_2_synth_1
+# Command line: vivado.exe -log design_1_PWM_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_PWM_0_2.tcl
+# Log file: C:/Users/au087680/Desktop/-p/gyak2/gyak2/gyak2.runs/design_1_PWM_0_2_synth_1/design_1_PWM_0_2.vds
+# Journal file: C:/Users/au087680/Desktop/-p/gyak2/gyak2/gyak2.runs/design_1_PWM_0_2_synth_1\vivado.jou
+# Running On: RRF-PC-153, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 16853 MB
+#-----------------------------------------------------------
+source design_1_PWM_0_2.tcl -notrace

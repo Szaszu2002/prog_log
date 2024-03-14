@@ -1,0 +1,590 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xC164F6286D85184E",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../gyak2.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz": "",
+      "proc_sys_reset_0": "",
+      "PWM_0": "",
+      "PWM_1": "",
+      "PWM_2": "",
+      "Mapper_0": "",
+      "Mapper_1": "",
+      "Mapper_2": ""
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "sw4_0": {
+        "direction": "I"
+      },
+      "sw3_0": {
+        "direction": "I"
+      },
+      "sw4_1": {
+        "direction": "I"
+      },
+      "sw1_0": {
+        "direction": "I"
+      },
+      "sw2_0": {
+        "direction": "I"
+      },
+      "sw1_1": {
+        "direction": "I"
+      },
+      "sw2_1": {
+        "direction": "I"
+      },
+      "sw3_1": {
+        "direction": "I"
+      },
+      "sw2_2": {
+        "direction": "I"
+      },
+      "sw4_2": {
+        "direction": "I"
+      },
+      "sw3_2": {
+        "direction": "I"
+      },
+      "sw1_2": {
+        "direction": "I"
+      },
+      "pwm_0": {
+        "direction": "O"
+      },
+      "pwm_1": {
+        "direction": "O"
+      },
+      "pwm_2": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0",
+        "xci_path": "ip\\design_1_clk_wiz_0\\design_1_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "design_1_proc_sys_reset_0_1",
+        "xci_path": "ip\\design_1_proc_sys_reset_0_1\\design_1_proc_sys_reset_0_1.xci",
+        "inst_hier_path": "proc_sys_reset_0"
+      },
+      "PWM_0": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "design_1_PWM_0_0",
+        "xci_path": "ip\\design_1_PWM_0_0\\design_1_PWM_0_0.xci",
+        "inst_hier_path": "PWM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "duty": {
+            "direction": "I",
+            "left": "17",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          }
+        }
+      },
+      "PWM_1": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "design_1_PWM_0_1",
+        "xci_path": "ip\\design_1_PWM_0_1\\design_1_PWM_0_1.xci",
+        "inst_hier_path": "PWM_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "duty": {
+            "direction": "I",
+            "left": "17",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          }
+        }
+      },
+      "PWM_2": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "design_1_PWM_0_2",
+        "xci_path": "ip\\design_1_PWM_0_2\\design_1_PWM_0_2.xci",
+        "inst_hier_path": "PWM_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "duty": {
+            "direction": "I",
+            "left": "17",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          }
+        }
+      },
+      "Mapper_0": {
+        "vlnv": "xilinx.com:module_ref:Mapper:1.0",
+        "xci_name": "design_1_Mapper_0_0",
+        "xci_path": "ip\\design_1_Mapper_0_0\\design_1_Mapper_0_0.xci",
+        "inst_hier_path": "Mapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sw1": {
+            "direction": "I"
+          },
+          "sw2": {
+            "direction": "I"
+          },
+          "sw3": {
+            "direction": "I"
+          },
+          "sw4": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "mapped": {
+            "direction": "O",
+            "left": "17",
+            "right": "0"
+          }
+        }
+      },
+      "Mapper_1": {
+        "vlnv": "xilinx.com:module_ref:Mapper:1.0",
+        "xci_name": "design_1_Mapper_0_1",
+        "xci_path": "ip\\design_1_Mapper_0_1\\design_1_Mapper_0_1.xci",
+        "inst_hier_path": "Mapper_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sw1": {
+            "direction": "I"
+          },
+          "sw2": {
+            "direction": "I"
+          },
+          "sw3": {
+            "direction": "I"
+          },
+          "sw4": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "mapped": {
+            "direction": "O",
+            "left": "17",
+            "right": "0"
+          }
+        }
+      },
+      "Mapper_2": {
+        "vlnv": "xilinx.com:module_ref:Mapper:1.0",
+        "xci_name": "design_1_Mapper_0_2",
+        "xci_path": "ip\\design_1_Mapper_0_2\\design_1_Mapper_0_2.xci",
+        "inst_hier_path": "Mapper_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sw1": {
+            "direction": "I"
+          },
+          "sw2": {
+            "direction": "I"
+          },
+          "sw3": {
+            "direction": "I"
+          },
+          "sw4": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "mapped": {
+            "direction": "O",
+            "left": "17",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Mapper_0_mapped": {
+        "ports": [
+          "Mapper_0/mapped",
+          "PWM_0/duty"
+        ]
+      },
+      "Mapper_1_mapped": {
+        "ports": [
+          "Mapper_1/mapped",
+          "PWM_1/duty"
+        ]
+      },
+      "Mapper_2_mapped": {
+        "ports": [
+          "Mapper_2/mapped",
+          "PWM_2/duty"
+        ]
+      },
+      "PWM_0_pwm": {
+        "ports": [
+          "PWM_0/pwm",
+          "pwm_1"
+        ]
+      },
+      "PWM_1_pwm": {
+        "ports": [
+          "PWM_1/pwm",
+          "pwm_0"
+        ]
+      },
+      "PWM_2_pwm": {
+        "ports": [
+          "PWM_2/pwm",
+          "pwm_2"
+        ]
+      },
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "PWM_0/clk",
+          "PWM_1/clk",
+          "PWM_2/clk",
+          "Mapper_0/clk",
+          "Mapper_1/clk",
+          "Mapper_2/clk"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "PWM_0/rstn",
+          "PWM_1/rstn",
+          "PWM_2/rstn"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "sw1_0_1": {
+        "ports": [
+          "sw1_0",
+          "Mapper_2/sw1"
+        ]
+      },
+      "sw1_1_1": {
+        "ports": [
+          "sw1_1",
+          "Mapper_1/sw1"
+        ]
+      },
+      "sw1_2_1": {
+        "ports": [
+          "sw1_2",
+          "Mapper_0/sw1"
+        ]
+      },
+      "sw2_0_1": {
+        "ports": [
+          "sw2_0",
+          "Mapper_2/sw2"
+        ]
+      },
+      "sw2_1_1": {
+        "ports": [
+          "sw2_1",
+          "Mapper_1/sw2"
+        ]
+      },
+      "sw2_2_1": {
+        "ports": [
+          "sw2_2",
+          "Mapper_0/sw2"
+        ]
+      },
+      "sw3_0_1": {
+        "ports": [
+          "sw3_0",
+          "Mapper_0/sw3"
+        ]
+      },
+      "sw3_1_1": {
+        "ports": [
+          "sw3_1",
+          "Mapper_2/sw3"
+        ]
+      },
+      "sw3_2_1": {
+        "ports": [
+          "sw3_2",
+          "Mapper_1/sw3"
+        ]
+      },
+      "sw4_0_1": {
+        "ports": [
+          "sw4_0",
+          "Mapper_1/sw4"
+        ]
+      },
+      "sw4_1_1": {
+        "ports": [
+          "sw4_1",
+          "Mapper_0/sw4"
+        ]
+      },
+      "sw4_2_1": {
+        "ports": [
+          "sw4_2",
+          "Mapper_2/sw4"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz/clk_in1"
+        ]
+      }
+    }
+  }
+}

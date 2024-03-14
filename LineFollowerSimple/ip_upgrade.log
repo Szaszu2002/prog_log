@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Thu Mar 14 14:34:37 2024
+| Host         : RRF-PC-153 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'robot_design_clk_wiz_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of robot_design_clk_wiz_0 (xilinx.com:ip:clk_wiz:6.0) from (Rev. 11) to (Rev. 12)
+

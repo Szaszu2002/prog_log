@@ -1,0 +1,447 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x3D4B5F35292DF00B",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../LineFollowerSimple.gen/sources_1/bd/robot_design",
+      "name": "robot_design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Clock_divider_0": "",
+      "rst_vip_0": "",
+      "LPWM": "",
+      "RPWM": "",
+      "clk_wiz": "",
+      "RobotLogic_0": ""
+    },
+    "ports": {
+      "reset_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "pwm_0": {
+        "direction": "O"
+      },
+      "pwm_2": {
+        "direction": "O"
+      },
+      "Sensors": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "robot_design_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      }
+    },
+    "components": {
+      "Clock_divider_0": {
+        "vlnv": "xilinx.com:module_ref:Clock_divider:1.0",
+        "xci_name": "robot_design_Clock_divider_0_0",
+        "xci_path": "ip\\robot_design_Clock_divider_0_0\\robot_design_Clock_divider_0_0.xci",
+        "inst_hier_path": "Clock_divider_0",
+        "parameters": {
+          "DIVISOR": {
+            "value": "0x0061A80"
+          },
+          "DIVISOR_PER_2": {
+            "value": "0x0030D40"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Clock_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock_in": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "40000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clock_out": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "rst_vip_0": {
+        "vlnv": "xilinx.com:ip:rst_vip:1.0",
+        "xci_name": "robot_design_rst_vip_0_0",
+        "xci_path": "ip\\robot_design_rst_vip_0_0\\robot_design_rst_vip_0_0.xci",
+        "inst_hier_path": "rst_vip_0",
+        "parameters": {
+          "ASYNCHRONOUS": {
+            "value": "NO"
+          },
+          "INTERFACE_MODE": {
+            "value": "PASS_THROUGH"
+          }
+        }
+      },
+      "LPWM": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "robot_design_PWM_0_0",
+        "xci_path": "ip\\robot_design_PWM_0_0\\robot_design_PWM_0_0.xci",
+        "inst_hier_path": "LPWM",
+        "parameters": {
+          "ARR": {
+            "value": "255"
+          },
+          "PSC": {
+            "value": "1000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "RPWM": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "robot_design_PWM_1_0",
+        "xci_path": "ip\\robot_design_PWM_1_0\\robot_design_PWM_1_0.xci",
+        "inst_hier_path": "RPWM",
+        "parameters": {
+          "ARR": {
+            "value": "255"
+          },
+          "PSC": {
+            "value": "1000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "robot_design_clk_wiz_0",
+        "xci_path": "ip\\robot_design_clk_wiz_0\\robot_design_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "159.371"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "40"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "25"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "RobotLogic_0": {
+        "vlnv": "xilinx.com:module_ref:RobotLogic:1.0",
+        "xci_name": "robot_design_RobotLogic_0_0",
+        "xci_path": "ip\\robot_design_RobotLogic_0_0\\robot_design_RobotLogic_0_0.xci",
+        "inst_hier_path": "RobotLogic_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RobotLogic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rstn",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "robot_design_Clock_divider_0_0_clock_out",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "sensor": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "pwmL": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "pwmR": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Clock_divider_0_clock_out": {
+        "ports": [
+          "Clock_divider_0/clock_out",
+          "RobotLogic_0/clk"
+        ]
+      },
+      "PWM_0_pwm": {
+        "ports": [
+          "LPWM/pwm",
+          "pwm_0"
+        ]
+      },
+      "PWM_2_pwm": {
+        "ports": [
+          "RPWM/pwm",
+          "pwm_2"
+        ]
+      },
+      "RobotLogic_0_pwmL": {
+        "ports": [
+          "RobotLogic_0/pwmL",
+          "LPWM/duty"
+        ]
+      },
+      "RobotLogic_0_pwmR": {
+        "ports": [
+          "RobotLogic_0/pwmR",
+          "RPWM/duty"
+        ]
+      },
+      "Sensors_1": {
+        "ports": [
+          "Sensors",
+          "RobotLogic_0/sensor"
+        ]
+      },
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "LPWM/clk",
+          "RPWM/clk"
+        ]
+      },
+      "clk_wiz_clk_out2": {
+        "ports": [
+          "clk_wiz/clk_out2",
+          "Clock_divider_0/clock_in"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset_0",
+          "rst_vip_0/rst_in"
+        ]
+      },
+      "sim_clk_gen_0_sync_rst": {
+        "ports": [
+          "rst_vip_0/rst_out",
+          "Clock_divider_0/resetn",
+          "LPWM/rstn",
+          "RPWM/rstn",
+          "clk_wiz/resetn",
+          "RobotLogic_0/rstn"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "rst_vip_0/sync_clk",
+          "clk_wiz/clk_in1"
+        ]
+      }
+    },
+    "comments": {
+      "/Sensors": {
+        "comment_0": "// 0: right, 1: middle, 2: left"
+      }
+    }
+  }
+}

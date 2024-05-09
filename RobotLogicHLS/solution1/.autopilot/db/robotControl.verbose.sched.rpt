@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vitis HLS Report for 'robotControl'
+================================================================
+* Date:           Thu May  2 15:03:37 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        RobotLogicHLS
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.923 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.92>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [RobotLogicHLS/src/RobotLogic.c:16]   --->   Operation 2 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln16 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0" [RobotLogicHLS/src/RobotLogic.c:16]   --->   Operation 3 'specinterface' 'specinterface_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %dutyLeft"   --->   Operation 4 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %dutyLeft, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %dutyRight"   --->   Operation 6 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %dutyRight, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %sensors"   --->   Operation 8 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %sensors, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sensors_read = read i8 @_ssdm_op_Read.ap_none.i8, i8 %sensors" [RobotLogicHLS/src/RobotLogic.c:16]   --->   Operation 10 'read' 'sensors_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.92ns)   --->   "%switch_ln23 = switch i8 %sensors_read, void %sw.default, i8 0, void %sw.bb, i8 1, void %sw.bb1, i8 2, void %sw.bb2, i8 3, void %sw.bb3, i8 4, void %sw.bb4, i8 5, void %sw.bb5, i8 6, void %sw.bb6, i8 7, void %sw.bb7" [RobotLogicHLS/src/RobotLogic.c:23]   --->   Operation 11 'switch' 'switch_ln23' <Predicate = true> <Delay = 1.92>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%write_ln31 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 0" [RobotLogicHLS/src/RobotLogic.c:31]   --->   Operation 12 'write' 'write_ln31' <Predicate = (sensors_read == 7)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%write_ln31 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 0" [RobotLogicHLS/src/RobotLogic.c:31]   --->   Operation 13 'write' 'write_ln31' <Predicate = (sensors_read == 7)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln31 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:31]   --->   Operation 14 'br' 'br_ln31' <Predicate = (sensors_read == 7)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%write_ln30 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:30]   --->   Operation 15 'write' 'write_ln30' <Predicate = (sensors_read == 6)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%write_ln30 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:30]   --->   Operation 16 'write' 'write_ln30' <Predicate = (sensors_read == 6)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln30 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:30]   --->   Operation 17 'br' 'br_ln30' <Predicate = (sensors_read == 6)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%write_ln29 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 0" [RobotLogicHLS/src/RobotLogic.c:29]   --->   Operation 18 'write' 'write_ln29' <Predicate = (sensors_read == 5)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%write_ln29 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 0" [RobotLogicHLS/src/RobotLogic.c:29]   --->   Operation 19 'write' 'write_ln29' <Predicate = (sensors_read == 5)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln29 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:29]   --->   Operation 20 'br' 'br_ln29' <Predicate = (sensors_read == 5)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:28]   --->   Operation 21 'write' 'write_ln28' <Predicate = (sensors_read == 4)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:28]   --->   Operation 22 'write' 'write_ln28' <Predicate = (sensors_read == 4)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln28 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:28]   --->   Operation 23 'br' 'br_ln28' <Predicate = (sensors_read == 4)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:27]   --->   Operation 24 'write' 'write_ln27' <Predicate = (sensors_read == 3)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:27]   --->   Operation 25 'write' 'write_ln27' <Predicate = (sensors_read == 3)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln27 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:27]   --->   Operation 26 'br' 'br_ln27' <Predicate = (sensors_read == 3)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%write_ln26 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:26]   --->   Operation 27 'write' 'write_ln26' <Predicate = (sensors_read == 2)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%write_ln26 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:26]   --->   Operation 28 'write' 'write_ln26' <Predicate = (sensors_read == 2)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln26 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:26]   --->   Operation 29 'br' 'br_ln26' <Predicate = (sensors_read == 2)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%write_ln25 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:25]   --->   Operation 30 'write' 'write_ln25' <Predicate = (sensors_read == 1)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%write_ln25 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:25]   --->   Operation 31 'write' 'write_ln25' <Predicate = (sensors_read == 1)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln25 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:25]   --->   Operation 32 'br' 'br_ln25' <Predicate = (sensors_read == 1)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%write_ln24 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:24]   --->   Operation 33 'write' 'write_ln24' <Predicate = (sensors_read == 0)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%write_ln24 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:24]   --->   Operation 34 'write' 'write_ln24' <Predicate = (sensors_read == 0)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln24 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:24]   --->   Operation 35 'br' 'br_ln24' <Predicate = (sensors_read == 0)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%write_ln32 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 0" [RobotLogicHLS/src/RobotLogic.c:32]   --->   Operation 36 'write' 'write_ln32' <Predicate = (sensors_read != 0 & sensors_read != 1 & sensors_read != 2 & sensors_read != 3 & sensors_read != 4 & sensors_read != 5 & sensors_read != 6 & sensors_read != 7)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%write_ln32 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 0" [RobotLogicHLS/src/RobotLogic.c:32]   --->   Operation 37 'write' 'write_ln32' <Predicate = (sensors_read != 0 & sensors_read != 1 & sensors_read != 2 & sensors_read != 3 & sensors_read != 4 & sensors_read != 5 & sensors_read != 6 & sensors_read != 7)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln33 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:33]   --->   Operation 38 'br' 'br_ln33' <Predicate = (sensors_read != 0 & sensors_read != 1 & sensors_read != 2 & sensors_read != 3 & sensors_read != 4 & sensors_read != 5 & sensors_read != 6 & sensors_read != 7)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%ret_ln34 = ret" [RobotLogicHLS/src/RobotLogic.c:34]   --->   Operation 39 'ret' 'ret_ln34' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.923ns
+The critical path consists of the following:
+	wire read operation ('sensors', RobotLogicHLS/src/RobotLogic.c:16) on port 'sensors' (RobotLogicHLS/src/RobotLogic.c:16) [12]  (0.000 ns)
+	blocking operation 1.92262 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

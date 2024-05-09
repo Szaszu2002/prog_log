@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu May  9 15:20:11 2024
+# Process ID: 12792
+# Current directory: C:/Users/au087680/Desktop/-p/beadando2/LineFollowerHLS.xpr/LineFollowerHLS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11572 C:\Users\au087680\Desktop\-p\beadando2\LineFollowerHLS.xpr\LineFollowerHLS\LineFollowerSimple.xpr
+# Log file: C:/Users/au087680/Desktop/-p/beadando2/LineFollowerHLS.xpr/LineFollowerHLS/vivado.log
+# Journal file: C:/Users/au087680/Desktop/-p/beadando2/LineFollowerHLS.xpr/LineFollowerHLS\vivado.jou
+# Running On: RRF-PC-153, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 16853 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/au087680/Desktop/-p/beadando2/LineFollowerHLS.xpr/LineFollowerHLS/LineFollowerSimple.xpr
+update_compile_order -fileset sources_1

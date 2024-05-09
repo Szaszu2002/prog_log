@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="RobotLogic.c" path="C:\Users\au087680\Desktop\-p\RobotLogicHLS\src\RobotLogic.c"/>
+    <originFiles name="RobotLogic.h" path="C:\Users\au087680\Desktop\-p\RobotLogicHLS\src\RobotLogic.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,94 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.643195",
+   "Default View_TopLeft":"-149,-207",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_reset_0 -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_pwm_0 -pg 1 -lvl 5 -x 1100 -y 130 -defaultsOSRD
+preplace port port-id_pwm_2 -pg 1 -lvl 5 -x 1100 -y 310 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus Sensors -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace portBus middleSensorValue_0 -pg 1 -lvl 5 -x 1100 -y 230 -defaultsOSRD
+preplace portBus leftSensorValue_0 -pg 1 -lvl 5 -x 1100 -y 70 -defaultsOSRD
+preplace portBus rightSensorValue_0 -pg 1 -lvl 5 -x 1100 -y 200 -defaultsOSRD
+preplace portBus middleSensorValue_1 -pg 1 -lvl 5 -x 1100 -y 640 -defaultsOSRD
+preplace portBus rightSensorValue_1 -pg 1 -lvl 5 -x 1100 -y 670 -defaultsOSRD
+preplace portBus leftSensorValue_1 -pg 1 -lvl 5 -x 1100 -y 610 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 390 -y 370 -defaultsOSRD -pinDir reset left -pinY reset 0L -pinDir clk_in1 left -pinY clk_in1 20L -pinDir clk_out1 right -pinY clk_out1 0R -pinDir locked right -pinY locked 20R
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -x 670 -y 370 -swap {0 2 3 4 1 6 7 8 9 5} -defaultsOSRD -pinDir slowest_sync_clk left -pinY slowest_sync_clk 0L -pinDir ext_reset_in left -pinY ext_reset_in 80L -pinDir aux_reset_in left -pinY aux_reset_in 100L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 120L -pinDir dcm_locked left -pinY dcm_locked 20L -pinDir mb_reset right -pinY mb_reset 20R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 40R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 60R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 80R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 0R
+preplace inst reset_inv_0 -pg 1 -lvl 1 -x 160 -y 290 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 0L -pinBusDir Res right -pinBusY Res 0R
+preplace inst LPWM -pg 1 -lvl 4 -x 970 -y 130 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinBusDir duty left -pinBusY duty 20L -pinDir pwm right -pinY pwm 0R -pinDir rst left -pinY rst 40L
+preplace inst RPWM -pg 1 -lvl 4 -x 970 -y 310 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinBusDir duty left -pinBusY duty 20L -pinDir pwm right -pinY pwm 0R -pinDir rst left -pinY rst 40L
+preplace inst sim_clk_gen_0 -pg 1 -lvl 1 -x 160 -y 390 -defaultsOSRD -pinDir clk right -pinY clk 0R -pinDir sync_rst left -pinY sync_rst 0L
+preplace inst SensorValueConverter_0 -pg 1 -lvl 3 -x 670 -y 70 -swap {0 1 5 2 4 3} -defaultsOSRD -pinBusDir sensors left -pinBusY sensors 160L -pinDir clk left -pinY clk 180L -pinDir rst right -pinY rst 200R -pinBusDir leftSensorValue right -pinBusY leftSensorValue 0R -pinBusDir middleSensorValue right -pinBusY middleSensorValue 180R -pinBusDir rightSensorValue right -pinBusY rightSensorValue 160R
+preplace inst SensorValueConverter_1 -pg 1 -lvl 3 -x 670 -y 590 -defaultsOSRD -pinBusDir sensors left -pinBusY sensors 0L -pinDir clk left -pinY clk 20L -pinDir rst right -pinY rst 0R -pinBusDir leftSensorValue right -pinBusY leftSensorValue 20R -pinBusDir middleSensorValue right -pinBusY middleSensorValue 50R -pinBusDir rightSensorValue right -pinBusY rightSensorValue 80R
+preplace netloc PWM_0_pwm 1 4 1 N 130
+preplace netloc PWM_2_pwm 1 4 1 N 310
+preplace netloc clk_wiz_clk_out1 1 2 2 500 10 840
+preplace netloc clk_wiz_locked 1 2 1 N 390
+preplace netloc reset_inv_0_Res 1 1 2 300J 450 N
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 3 1 860 170n
+preplace netloc sim_clk_gen_0_clk 1 1 1 N 390
+preplace netloc sim_clk_gen_0_sync_rst 1 0 1 20 290n
+preplace netloc SensorValueConverter_0_leftSensorValue 1 3 2 NJ 70 N
+preplace netloc SensorValueConverter_0_middleSensorValue 1 3 2 NJ 250 1080
+preplace netloc SensorValueConverter_0_rightSensorValue 1 3 2 N 230 NJ
+preplace netloc SensorValueConverter_1_leftSensorValue 1 3 2 NJ 610 N
+preplace netloc SensorValueConverter_1_middleSensorValue 1 3 2 NJ 640 N
+preplace netloc SensorValueConverter_1_rightSensorValue 1 3 2 N 670 NJ
+preplace netloc Sensors_1 1 0 3 NJ 230 NJ 230 480
+levelinfo -pg 1 0 160 390 670 970 1100
+pagesize -pg 1 -db -bbox -sgen -130 0 1320 730
+",
+   "No Loops_ScaleFactor":"1.62329",
+   "No Loops_TopLeft":"-229,1",
+   "comment_0":"// 0: right, 1: middle, 2: left",
+   "commentid":"comment_0|",
+   "fillcolor_comment_0":"",
+   "font_comment_0":"27",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_reset_0 -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
+preplace port port-id_pwm_0 -pg 1 -lvl 6 -x 1600 -y 220 -defaultsOSRD
+preplace port port-id_pwm_2 -pg 1 -lvl 6 -x 1600 -y 80 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -20 -y 50 -defaultsOSRD
+preplace portBus Sensors -pg 1 -lvl 0 -x -20 -y 250 -defaultsOSRD
+preplace inst Clock_divider_0 -pg 1 -lvl 3 -x 850 -y 180 -defaultsOSRD
+preplace inst rst_vip_0 -pg 1 -lvl 1 -x 350 -y 70 -defaultsOSRD
+preplace inst LPWM -pg 1 -lvl 5 -x 1470 -y 220 -defaultsOSRD
+preplace inst RPWM -pg 1 -lvl 5 -x 1470 -y 80 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 610 -y 130 -defaultsOSRD
+preplace inst robotControl_0 -pg 1 -lvl 4 -x 1130 -y -10 -defaultsOSRD
+preplace inst RobotLogicCombine_0 -pg 1 -lvl 4 -x 1130 -y -140 -defaultsOSRD
+preplace netloc PWM_0_pwm 1 5 1 NJ 220
+preplace netloc PWM_2_pwm 1 5 1 NJ 80
+preplace netloc clk_wiz_clk_out1 1 2 3 N 110 N 110 1360
+preplace netloc clk_wiz_clk_out2 1 2 1 700 130n
+preplace netloc reset_0_1 1 0 1 NJ 80
+preplace netloc sim_clk_gen_0_sync_rst 1 1 4 510 210 740 250 N 250 1350
+preplace netloc sys_clock_1 1 0 2 260 0 520
+preplace netloc robotControl_0_dutyLeft 1 4 1 1300 -20n
+preplace netloc robotControl_0_dutyRight 1 4 1 1310 0n
+preplace netloc Sensors_1 1 0 4 0J -150 NJ -150 NJ -150 N
+preplace netloc Clock_divider_0_clock_out 1 3 1 960 -130n
+preplace netloc RobotLogicCombine_0_combine 1 3 2 970 60 1290
+preplace cgraphic comment_0 place bot -59 71 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -20 350 610 850 1130 1470 1600
+pagesize -pg 1 -db -bbox -sgen -160 -210 1760 440
+",
+   "linecolor_comment_0":"",
+   "linktoobj_comment_0":"/Sensors",
+   "linktotype_comment_0":"bd_port",
+   "textcolor_comment_0":""
+}
+{
+   """"""""da_board_cnt"""""""":"3",
+   """"""""da_clkrst_cnt"""""""":"7"
+}
+{
+   "/Sensors/comment_0":"comment_0"
+}

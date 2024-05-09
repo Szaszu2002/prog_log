@@ -1,0 +1,84 @@
+
+
+================================================================
+== Synthesis Summary Report of 'robotControl'
+================================================================
++ General Information: 
+    * Date:           Thu May  2 15:03:37 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        RobotLogicHLS
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a100t-csg324-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----------+-----+
+    |     Modules    | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |   |          |     |
+    |     & Loops    | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP| FF|    LUT   | URAM|
+    +----------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----------+-----+
+    |+ robotControl  |     -|  5.38|        0|   0.000|         -|        1|     -|        no|     -|   -|  -|  42 (~0%)|    -|
+    +----------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| dutyLeft  | ap_none | out       | 16       |
+| dutyRight | ap_none | out       | 16       |
+| sensors   | ap_none | in        | 8        |
++-----------+---------+-----------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+-----------------+
+| Argument  | Direction | Datatype        |
++-----------+-----------+-----------------+
+| dutyLeft  | out       | unsigned short* |
+| dutyRight | out       | unsigned short* |
+| sensors   | in        | unsigned char   |
++-----------+-----------+-----------------+
+
+* SW-to-HW Mapping
++-----------+--------------+---------+
+| Argument  | HW Interface | HW Type |
++-----------+--------------+---------+
+| dutyLeft  | dutyLeft     | port    |
+| dutyRight | dutyRight    | port    |
+| sensors   | sensors      | port    |
++-----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------+---------------------------------------------------+
+| Type      | Options                    | Location                                          |
++-----------+----------------------------+---------------------------------------------------+
+| interface | ap_ctrl_none port = return | RobotLogicHLS/src/RobotLogic.c:17 in robotcontrol |
+| interface | ap_none port = dutyLeft    | RobotLogicHLS/src/RobotLogic.c:18 in robotcontrol |
+| interface | ap_none port = dutyRight   | RobotLogicHLS/src/RobotLogic.c:19 in robotcontrol |
+| interface | ap_none port = sensors     | RobotLogicHLS/src/RobotLogic.c:20 in robotcontrol |
++-----------+----------------------------+---------------------------------------------------+
+
+

@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="RobotLogicHLS/src/RobotLogic.c" line="17" pragmaType="interface" parentfunction="robotControl" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="RobotLogicHLS/src/RobotLogic.c" line="18" pragmaType="interface" parentfunction="robotControl" mode="ap_none" port="dutyLeft" name="" register="0"/>
+<pragma file="RobotLogicHLS/src/RobotLogic.c" line="19" pragmaType="interface" parentfunction="robotControl" mode="ap_none" port="dutyRight" name="" register="0"/>
+<pragma file="RobotLogicHLS/src/RobotLogic.c" line="20" pragmaType="interface" parentfunction="robotControl" mode="ap_none" port="sensors" name="" register="0"/>
+</pragmas>

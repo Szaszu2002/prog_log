@@ -1,0 +1,18 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="robotControl" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=robotControl" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RobotLogicHLS/src/RobotLogic.c:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="robotControl" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RobotLogicHLS/src/RobotLogic.c:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="robotControl" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = dutyLeft" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RobotLogicHLS/src/RobotLogic.c:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="robotControl" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = dutyRight" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="RobotLogicHLS/src/RobotLogic.c:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="robotControl" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = sensors" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

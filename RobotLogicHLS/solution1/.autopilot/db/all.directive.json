@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "robotControl",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "robotControl"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/csynth.tcl",
+    "sourceLine": 15,
+    "success": true
+  }
+]

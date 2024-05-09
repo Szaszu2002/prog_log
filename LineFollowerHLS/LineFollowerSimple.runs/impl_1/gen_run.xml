@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1714656102">
+  <File Type="ROUTE-PWR" Name="robot_design_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="robot_design_wrapper.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="robot_design_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="robot_design_wrapper_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="robot_design_wrapper_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="robot_design_wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="robot_design_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="robot_design_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="robot_design_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="robot_design_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="robot_design_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="robot_design_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="robot_design_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="robot_design_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="robot_design_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="robot_design_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="robot_design_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="robot_design_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="robot_design_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="robot_design_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="robot_design_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="robot_design_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="robot_design_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="robot_design_wrapper.bin"/>
+  <File Type="PLACE-TIMING" Name="robot_design_wrapper_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="robot_design_wrapper_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="robot_design_wrapper_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="robot_design_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="robot_design_wrapper.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="robot_design_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="robot_design_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="robot_design_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="robot_design_wrapper.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="robot_design_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="robot_design_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="robot_design_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="robot_design_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="robot_design_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="robot_design_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="robot_design_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="robot_design_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="robot_design_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="robot_design_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="robot_design_wrapper_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="robot_design_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="robot_design_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="robot_design_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="robot_design_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="robot_design_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="robot_design_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="robot_design_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="robot_design_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="robot_design_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="robot_design_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="robot_design_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="robot_design_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="robot_design_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="robot_design_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="robot_design_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="robot_design_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="robot_design_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="robot_design_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="robot_design_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="robot_design_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="robot_design_wrapper_bd.bmm"/>
+  <File Type="PDI-FILE" Name="robot_design_wrapper.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="robot_design_wrapper_soc.pdi"/>
+  <File Type="PL-PDI-FILE" Name="robot_design_wrapper_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="robot_design_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="robot_design_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="robot_design_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="robot_design_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="robot_design_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="robot_design_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="robot_design_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="robot_design_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="robot_design_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="robot_design_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="robot_design_wrapper_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="robot_design_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Clock_divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="D:/Dev/Vitis/Nexys4/Nexys4.srcs/sources_1/new/Clock_divider.v"/>
+        <Attr Name="ImportTime" Val="1672176550"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PWM.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="D:/Dev/Vitis/Nexys4/Nexys4.srcs/sources_1/new/PWM.v"/>
+        <Attr Name="ImportTime" Val="1650456426"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/robot_design/robot_design.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="D:/Dev/Vitis/Nexys4/Nexys4.srcs/sources_1/bd/robot_design/robot_design.bd"/>
+        <Attr Name="ImportTime" Val="1672310192"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/robot_design_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="D:/Dev/Vitis/LineFollower_FIVE/LineFollower_FIVE.gen/sources_1/bd/robot_design/hdl/robot_design_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1673048152"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RobotLogic.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../LineFollowerSimple/LineFollowerSimple.srcs/sources_1/new/RobotLogic.v"/>
+        <Attr Name="ImportTime" Val="1697219705"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/robot_design/hdl/robot_design_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/LineFollower_FIVE/archive_project_summary.txt">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../dev/xilinx/LineFollower_FIVE/archive_project_summary.txt"/>
+        <Attr Name="ImportTime" Val="1673362200"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/archive_project_summary.txt"/>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="robot_design_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/robot.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="D:/Dev/Vitis/Nexys4/Nexys4.srcs/constrs_1/new/robot.xdc"/>
+        <Attr Name="ImportTime" Val="1672231804"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/robot.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/robot_design_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="D:/Dev/Vitis/Nexys4/Nexys4.srcs/utils_1/imports/synth_1/robot_design_wrapper.dcp"/>
+        <Attr Name="ImportTime" Val="1672229332"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="robot_design_Clock_divider_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="robot_design_rst_vip_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="robot_design_PWM_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="robot_design_PWM_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="robot_design_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="robot_design_robotControl_0_0"/>
+</GenRun>

@@ -1,0 +1,485 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 97.945 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.406 seconds; current allocated memory: 0.512 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 95.672 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+ERROR: [HLS 207-812] 'ap_fixed_ref.h' file not found (RobotLogicHLS/src/RobotLogic.c:3:10)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.303 seconds; current allocated memory: 0.652 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 96.035 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.311 seconds; current allocated memory: 0.961 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 96.160 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+ERROR: [HLS 207-812] 'ap_fixed_ref.h' file not found (RobotLogicHLS/src/RobotLogic.c:3:10)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.272 seconds; current allocated memory: 0.414 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 95.754 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+ERROR: [HLS 207-812] 'ap_fixed_ref.h' file not found (RobotLogicHLS/src/RobotLogic.c:3:10)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.275 seconds; current allocated memory: 0.633 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 97.695 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+ERROR: [HLS 207-812] 'ap_fixed_ref.h' file not found (RobotLogicHLS/src/RobotLogic.c:4:10)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.285 seconds; current allocated memory: 0.328 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 98.320 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 0.395 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 96.070 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-814] "AP data type can only be used in C++" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_decl.h:47:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_ref.h:16:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:25:2)
+ERROR: [HLS 207-814] "C++ is required to include this header file" (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_ref.h:16:2)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.272 seconds; current allocated memory: 0.387 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 95.789 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-820] #include nested too deeply (RobotLogicHLS/src/RobotLogic.h:1:10)
+ERROR: [HLS 207-820] #include nested too deeply (RobotLogicHLS/src/RobotLogic.h:3:10)
+ERROR: [HLS 207-820] #include nested too deeply (C:\Xilinx\Vitis_HLS\2023.1\win64\tools\clang-3.9-csynth\lib\clang\7.0.0\include\stdint.h:63:16)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.256 seconds; current allocated memory: 0.555 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 95.703 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+ERROR: [HLS 207-3777] use of undeclared identifier 'dutyright'; did you mean 'dutyRight'? (RobotLogicHLS/src/RobotLogic.c:19:38)
+INFO: [HLS 207-4436] 'dutyRight' declared here (RobotLogicHLS/src/RobotLogic.c:16:48)
+ERROR: [HLS 207-3777] use of undeclared identifier 'sensor'; did you mean 'sensors'? (RobotLogicHLS/src/RobotLogic.c:23:9)
+INFO: [HLS 207-4436] 'sensors' declared here (RobotLogicHLS/src/RobotLogic.c:16:67)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 0.863 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 97.379 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.748 seconds; current allocated memory: 98.258 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.042 seconds; current allocated memory: 98.961 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 98.961 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 103.531 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 104.652 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 124.855 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 145.281 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'robotConrol' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'robotConrol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.211 seconds; current allocated memory: 148.992 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 150.188 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'robotConrol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotConrol/dutyLeft' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'dutyLeft' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotConrol/dutyRight' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'dutyRight' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotConrol/sensors' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'robotConrol' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'robotConrol'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 151.469 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 156.680 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 160.473 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for robotConrol.
+INFO: [VLOG 209-307] Generating Verilog RTL for robotConrol.
+INFO: [HLS 200-789] **** Estimated Fmax: 520.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.08 seconds; current allocated memory: 63.172 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 95.992 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/csynth.tcl:15)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.564 seconds; current allocated memory: 96.699 MB.
+ERROR: [HLS 214-157] Top function not found: there is no function named 'robotConrol'
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.145 seconds; current allocated memory: 1.402 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 95.852 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/csynth.tcl:15)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.549 seconds; current allocated memory: 96.938 MB.
+ERROR: [HLS 214-157] Top function not found: there is no function named 'robotConrol'
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.053 seconds; current allocated memory: 1.836 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 97.703 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+WARNING: [HLS 200-1986] Could not apply TOP directive, invalid function, label, or variable (C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/csynth.tcl:15)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.694 seconds; current allocated memory: 98.453 MB.
+ERROR: [HLS 214-157] Top function not found: there is no function named 'robotConrol'
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.223 seconds; current allocated memory: 1.480 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 95.742 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 96.590 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.754 seconds; current allocated memory: 97.531 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 97.531 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 101.773 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 102.848 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 123.273 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.281 seconds; current allocated memory: 143.766 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'robotControl' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'robotControl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 147.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 148.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'robotControl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotControl/dutyLeft' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'dutyLeft' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotControl/dutyRight' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'dutyRight' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotControl/sensors' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'robotControl' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'robotControl'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 149.852 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 154.832 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 158.922 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for robotControl.
+INFO: [VLOG 209-307] Generating Verilog RTL for robotControl.
+INFO: [HLS 200-789] **** Estimated Fmax: 520.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.556 seconds; current allocated memory: 63.363 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -output C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file RobotLogicHLS/IP/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.155 seconds; current allocated memory: 6.457 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./RobotLogicHLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name robotControl robotControl 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 100.750 MB.
+INFO: [HLS 200-10] Analyzing design file 'RobotLogicHLS/src/RobotLogic.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.928 seconds; current allocated memory: 101.723 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.147 seconds; current allocated memory: 102.812 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 102.816 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 107.531 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 108.914 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 129.703 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.369 seconds; current allocated memory: 154.125 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'robotControl' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'robotControl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 159.199 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 160.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'robotControl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotControl/dutyLeft' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'dutyLeft' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotControl/dutyRight' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'dutyRight' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'robotControl/sensors' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'robotControl' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'robotControl'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 161.613 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.296 seconds; current allocated memory: 169.848 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 173.227 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for robotControl.
+INFO: [VLOG 209-307] Generating Verilog RTL for robotControl.
+INFO: [HLS 200-789] **** Estimated Fmax: 520.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.66 seconds; current allocated memory: 72.777 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./RobotLogicHLS/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name robotControl robotControl 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file RobotLogicHLS/IP/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.628 seconds; current allocated memory: 5.410 MB.

@@ -1,0 +1,1450 @@
+
+
+================================================================
+== Vitis HLS Report for 'robotControl'
+================================================================
+* Date:           Thu May  9 14:46:08 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        RobotLogicHLS
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.923 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     42|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       0|     42|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      270|  240|  126800|  63400|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |dutyLeft   |  21|          5|   16|         80|
+    |dutyRight  |  21|          5|   16|         80|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  42|         10|   32|        160|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+---------+--------------+---------+
+| RTL Ports | Dir | Bits| Protocol| Source Object|  C Type |
++-----------+-----+-----+---------+--------------+---------+
+|dutyLeft   |  out|   16|  ap_none|      dutyLeft|  pointer|
+|dutyRight  |  out|   16|  ap_none|     dutyRight|  pointer|
+|sensors    |   in|    8|  ap_none|       sensors|   scalar|
++-----------+-----+-----+---------+--------------+---------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 1
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.92>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [RobotLogicHLS/src/RobotLogic.c:16]   --->   Operation 2 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln16 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0" [RobotLogicHLS/src/RobotLogic.c:16]   --->   Operation 3 'specinterface' 'specinterface_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %dutyLeft"   --->   Operation 4 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %dutyLeft, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %dutyRight"   --->   Operation 6 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %dutyRight, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %sensors"   --->   Operation 8 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %sensors, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sensors_read = read i8 @_ssdm_op_Read.ap_none.i8, i8 %sensors" [RobotLogicHLS/src/RobotLogic.c:16]   --->   Operation 10 'read' 'sensors_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.92ns)   --->   "%switch_ln34 = switch i8 %sensors_read, void %sw.default, i8 0, void %sw.bb, i8 1, void %sw.bb1, i8 2, void %sw.bb2, i8 3, void %sw.bb3, i8 4, void %sw.bb4, i8 5, void %sw.bb5, i8 6, void %sw.bb6, i8 7, void %sw.bb7, i8 8, void %sw.bb8, i8 9, void %sw.bb9, i8 10, void %sw.bb10, i8 11, void %sw.bb11, i8 12, void %sw.bb12, i8 13, void %sw.bb13, i8 14, void %sw.bb14, i8 15, void %sw.bb15, i8 16, void %sw.bb16, i8 17, void %sw.bb17, i8 18, void %sw.bb18, i8 19, void %sw.bb19, i8 20, void %sw.bb20, i8 21, void %sw.bb21, i8 22, void %sw.bb22, i8 23, void %sw.bb23, i8 24, void %sw.bb24, i8 25, void %sw.bb25, i8 26, void %sw.bb26, i8 27, void %sw.bb27, i8 28, void %sw.bb28, i8 29, void %sw.bb29, i8 30, void %sw.bb30, i8 31, void %sw.bb31, i8 32, void %sw.bb32, i8 33, void %sw.bb33, i8 34, void %sw.bb34, i8 35, void %sw.bb35, i8 36, void %sw.bb36, i8 37, void %sw.bb37, i8 38, void %sw.bb38, i8 39, void %sw.bb39, i8 40, void %sw.bb40, i8 41, void %sw.bb41, i8 42, void %sw.bb42, i8 43, void %sw.bb43, i8 44, void %sw.bb44, i8 45, void %sw.bb45, i8 46, void %sw.bb46, i8 47, void %sw.bb47, i8 48, void %sw.bb48, i8 49, void %sw.bb49, i8 50, void %sw.bb50, i8 51, void %sw.bb51, i8 52, void %sw.bb52, i8 53, void %sw.bb53, i8 54, void %sw.bb54, i8 55, void %sw.bb55, i8 56, void %sw.bb56, i8 57, void %sw.bb57, i8 58, void %sw.bb58, i8 59, void %sw.bb59, i8 60, void %sw.bb60, i8 61, void %sw.bb61, i8 62, void %sw.bb62, i8 63, void %sw.bb63" [RobotLogicHLS/src/RobotLogic.c:34]   --->   Operation 11 'switch' 'switch_ln34' <Predicate = true> <Delay = 1.92>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%write_ln105 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 0" [RobotLogicHLS/src/RobotLogic.c:105]   --->   Operation 12 'write' 'write_ln105' <Predicate = (sensors_read == 63)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%write_ln105 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 0" [RobotLogicHLS/src/RobotLogic.c:105]   --->   Operation 13 'write' 'write_ln105' <Predicate = (sensors_read == 63)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln105 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:105]   --->   Operation 14 'br' 'br_ln105' <Predicate = (sensors_read == 63)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%write_ln104 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:104]   --->   Operation 15 'write' 'write_ln104' <Predicate = (sensors_read == 62)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%write_ln104 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:104]   --->   Operation 16 'write' 'write_ln104' <Predicate = (sensors_read == 62)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln104 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:104]   --->   Operation 17 'br' 'br_ln104' <Predicate = (sensors_read == 62)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%write_ln103 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 0" [RobotLogicHLS/src/RobotLogic.c:103]   --->   Operation 18 'write' 'write_ln103' <Predicate = (sensors_read == 61)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%write_ln103 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 0" [RobotLogicHLS/src/RobotLogic.c:103]   --->   Operation 19 'write' 'write_ln103' <Predicate = (sensors_read == 61)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln103 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:103]   --->   Operation 20 'br' 'br_ln103' <Predicate = (sensors_read == 61)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%write_ln102 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:102]   --->   Operation 21 'write' 'write_ln102' <Predicate = (sensors_read == 60)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%write_ln102 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:102]   --->   Operation 22 'write' 'write_ln102' <Predicate = (sensors_read == 60)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln102 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:102]   --->   Operation 23 'br' 'br_ln102' <Predicate = (sensors_read == 60)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%write_ln101 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:101]   --->   Operation 24 'write' 'write_ln101' <Predicate = (sensors_read == 59)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%write_ln101 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:101]   --->   Operation 25 'write' 'write_ln101' <Predicate = (sensors_read == 59)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln101 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:101]   --->   Operation 26 'br' 'br_ln101' <Predicate = (sensors_read == 59)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%write_ln100 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:100]   --->   Operation 27 'write' 'write_ln100' <Predicate = (sensors_read == 58)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%write_ln100 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:100]   --->   Operation 28 'write' 'write_ln100' <Predicate = (sensors_read == 58)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln100 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:100]   --->   Operation 29 'br' 'br_ln100' <Predicate = (sensors_read == 58)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%write_ln99 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:99]   --->   Operation 30 'write' 'write_ln99' <Predicate = (sensors_read == 57)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%write_ln99 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:99]   --->   Operation 31 'write' 'write_ln99' <Predicate = (sensors_read == 57)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln99 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:99]   --->   Operation 32 'br' 'br_ln99' <Predicate = (sensors_read == 57)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%write_ln98 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 0" [RobotLogicHLS/src/RobotLogic.c:98]   --->   Operation 33 'write' 'write_ln98' <Predicate = (sensors_read == 56)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%write_ln98 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 0" [RobotLogicHLS/src/RobotLogic.c:98]   --->   Operation 34 'write' 'write_ln98' <Predicate = (sensors_read == 56)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln98 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:98]   --->   Operation 35 'br' 'br_ln98' <Predicate = (sensors_read == 56)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%write_ln96 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:96]   --->   Operation 36 'write' 'write_ln96' <Predicate = (sensors_read == 55)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%write_ln96 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:96]   --->   Operation 37 'write' 'write_ln96' <Predicate = (sensors_read == 55)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln96 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:96]   --->   Operation 38 'br' 'br_ln96' <Predicate = (sensors_read == 55)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%write_ln95 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:95]   --->   Operation 39 'write' 'write_ln95' <Predicate = (sensors_read == 54)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%write_ln95 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:95]   --->   Operation 40 'write' 'write_ln95' <Predicate = (sensors_read == 54)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln95 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:95]   --->   Operation 41 'br' 'br_ln95' <Predicate = (sensors_read == 54)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%write_ln94 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:94]   --->   Operation 42 'write' 'write_ln94' <Predicate = (sensors_read == 53)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%write_ln94 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:94]   --->   Operation 43 'write' 'write_ln94' <Predicate = (sensors_read == 53)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln94 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:94]   --->   Operation 44 'br' 'br_ln94' <Predicate = (sensors_read == 53)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%write_ln93 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:93]   --->   Operation 45 'write' 'write_ln93' <Predicate = (sensors_read == 52)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%write_ln93 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:93]   --->   Operation 46 'write' 'write_ln93' <Predicate = (sensors_read == 52)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln93 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:93]   --->   Operation 47 'br' 'br_ln93' <Predicate = (sensors_read == 52)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%write_ln92 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:92]   --->   Operation 48 'write' 'write_ln92' <Predicate = (sensors_read == 51)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%write_ln92 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:92]   --->   Operation 49 'write' 'write_ln92' <Predicate = (sensors_read == 51)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln92 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:92]   --->   Operation 50 'br' 'br_ln92' <Predicate = (sensors_read == 51)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%write_ln91 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:91]   --->   Operation 51 'write' 'write_ln91' <Predicate = (sensors_read == 50)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%write_ln91 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:91]   --->   Operation 52 'write' 'write_ln91' <Predicate = (sensors_read == 50)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln91 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:91]   --->   Operation 53 'br' 'br_ln91' <Predicate = (sensors_read == 50)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%write_ln90 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:90]   --->   Operation 54 'write' 'write_ln90' <Predicate = (sensors_read == 49)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%write_ln90 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:90]   --->   Operation 55 'write' 'write_ln90' <Predicate = (sensors_read == 49)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln90 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:90]   --->   Operation 56 'br' 'br_ln90' <Predicate = (sensors_read == 49)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%write_ln89 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:89]   --->   Operation 57 'write' 'write_ln89' <Predicate = (sensors_read == 48)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%write_ln89 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:89]   --->   Operation 58 'write' 'write_ln89' <Predicate = (sensors_read == 48)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln89 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:89]   --->   Operation 59 'br' 'br_ln89' <Predicate = (sensors_read == 48)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%write_ln87 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:87]   --->   Operation 60 'write' 'write_ln87' <Predicate = (sensors_read == 47)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%write_ln87 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:87]   --->   Operation 61 'write' 'write_ln87' <Predicate = (sensors_read == 47)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln87 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:87]   --->   Operation 62 'br' 'br_ln87' <Predicate = (sensors_read == 47)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%write_ln86 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:86]   --->   Operation 63 'write' 'write_ln86' <Predicate = (sensors_read == 46)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%write_ln86 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:86]   --->   Operation 64 'write' 'write_ln86' <Predicate = (sensors_read == 46)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln86 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:86]   --->   Operation 65 'br' 'br_ln86' <Predicate = (sensors_read == 46)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%write_ln85 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:85]   --->   Operation 66 'write' 'write_ln85' <Predicate = (sensors_read == 45)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%write_ln85 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:85]   --->   Operation 67 'write' 'write_ln85' <Predicate = (sensors_read == 45)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln85 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:85]   --->   Operation 68 'br' 'br_ln85' <Predicate = (sensors_read == 45)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%write_ln84 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:84]   --->   Operation 69 'write' 'write_ln84' <Predicate = (sensors_read == 44)> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%write_ln84 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:84]   --->   Operation 70 'write' 'write_ln84' <Predicate = (sensors_read == 44)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln84 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:84]   --->   Operation 71 'br' 'br_ln84' <Predicate = (sensors_read == 44)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%write_ln83 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:83]   --->   Operation 72 'write' 'write_ln83' <Predicate = (sensors_read == 43)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%write_ln83 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:83]   --->   Operation 73 'write' 'write_ln83' <Predicate = (sensors_read == 43)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln83 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:83]   --->   Operation 74 'br' 'br_ln83' <Predicate = (sensors_read == 43)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%write_ln82 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:82]   --->   Operation 75 'write' 'write_ln82' <Predicate = (sensors_read == 42)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%write_ln82 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:82]   --->   Operation 76 'write' 'write_ln82' <Predicate = (sensors_read == 42)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln82 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:82]   --->   Operation 77 'br' 'br_ln82' <Predicate = (sensors_read == 42)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%write_ln81 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:81]   --->   Operation 78 'write' 'write_ln81' <Predicate = (sensors_read == 41)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%write_ln81 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:81]   --->   Operation 79 'write' 'write_ln81' <Predicate = (sensors_read == 41)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln81 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:81]   --->   Operation 80 'br' 'br_ln81' <Predicate = (sensors_read == 41)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:80]   --->   Operation 81 'write' 'write_ln80' <Predicate = (sensors_read == 40)> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%write_ln80 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:80]   --->   Operation 82 'write' 'write_ln80' <Predicate = (sensors_read == 40)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln80 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:80]   --->   Operation 83 'br' 'br_ln80' <Predicate = (sensors_read == 40)> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%write_ln78 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:78]   --->   Operation 84 'write' 'write_ln78' <Predicate = (sensors_read == 39)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%write_ln78 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:78]   --->   Operation 85 'write' 'write_ln78' <Predicate = (sensors_read == 39)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln78 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:78]   --->   Operation 86 'br' 'br_ln78' <Predicate = (sensors_read == 39)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:77]   --->   Operation 87 'write' 'write_ln77' <Predicate = (sensors_read == 38)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%write_ln77 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:77]   --->   Operation 88 'write' 'write_ln77' <Predicate = (sensors_read == 38)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln77 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:77]   --->   Operation 89 'br' 'br_ln77' <Predicate = (sensors_read == 38)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%write_ln76 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:76]   --->   Operation 90 'write' 'write_ln76' <Predicate = (sensors_read == 37)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%write_ln76 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:76]   --->   Operation 91 'write' 'write_ln76' <Predicate = (sensors_read == 37)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%br_ln76 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:76]   --->   Operation 92 'br' 'br_ln76' <Predicate = (sensors_read == 37)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%write_ln75 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:75]   --->   Operation 93 'write' 'write_ln75' <Predicate = (sensors_read == 36)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%write_ln75 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:75]   --->   Operation 94 'write' 'write_ln75' <Predicate = (sensors_read == 36)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln75 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:75]   --->   Operation 95 'br' 'br_ln75' <Predicate = (sensors_read == 36)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:74]   --->   Operation 96 'write' 'write_ln74' <Predicate = (sensors_read == 35)> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:74]   --->   Operation 97 'write' 'write_ln74' <Predicate = (sensors_read == 35)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%br_ln74 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:74]   --->   Operation 98 'br' 'br_ln74' <Predicate = (sensors_read == 35)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%write_ln73 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:73]   --->   Operation 99 'write' 'write_ln73' <Predicate = (sensors_read == 34)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%write_ln73 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:73]   --->   Operation 100 'write' 'write_ln73' <Predicate = (sensors_read == 34)> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln73 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:73]   --->   Operation 101 'br' 'br_ln73' <Predicate = (sensors_read == 34)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%write_ln72 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:72]   --->   Operation 102 'write' 'write_ln72' <Predicate = (sensors_read == 33)> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%write_ln72 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:72]   --->   Operation 103 'write' 'write_ln72' <Predicate = (sensors_read == 33)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%br_ln72 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:72]   --->   Operation 104 'br' 'br_ln72' <Predicate = (sensors_read == 33)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:71]   --->   Operation 105 'write' 'write_ln71' <Predicate = (sensors_read == 32)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%write_ln71 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:71]   --->   Operation 106 'write' 'write_ln71' <Predicate = (sensors_read == 32)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%br_ln71 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:71]   --->   Operation 107 'br' 'br_ln71' <Predicate = (sensors_read == 32)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%write_ln69 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:69]   --->   Operation 108 'write' 'write_ln69' <Predicate = (sensors_read == 31)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%write_ln69 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:69]   --->   Operation 109 'write' 'write_ln69' <Predicate = (sensors_read == 31)> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%br_ln69 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:69]   --->   Operation 110 'br' 'br_ln69' <Predicate = (sensors_read == 31)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%write_ln68 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:68]   --->   Operation 111 'write' 'write_ln68' <Predicate = (sensors_read == 30)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%write_ln68 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:68]   --->   Operation 112 'write' 'write_ln68' <Predicate = (sensors_read == 30)> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln68 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:68]   --->   Operation 113 'br' 'br_ln68' <Predicate = (sensors_read == 30)> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%write_ln67 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:67]   --->   Operation 114 'write' 'write_ln67' <Predicate = (sensors_read == 29)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%write_ln67 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:67]   --->   Operation 115 'write' 'write_ln67' <Predicate = (sensors_read == 29)> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%br_ln67 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:67]   --->   Operation 116 'br' 'br_ln67' <Predicate = (sensors_read == 29)> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%write_ln66 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:66]   --->   Operation 117 'write' 'write_ln66' <Predicate = (sensors_read == 28)> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%write_ln66 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:66]   --->   Operation 118 'write' 'write_ln66' <Predicate = (sensors_read == 28)> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln66 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:66]   --->   Operation 119 'br' 'br_ln66' <Predicate = (sensors_read == 28)> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%write_ln65 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:65]   --->   Operation 120 'write' 'write_ln65' <Predicate = (sensors_read == 27)> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%write_ln65 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:65]   --->   Operation 121 'write' 'write_ln65' <Predicate = (sensors_read == 27)> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%br_ln65 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:65]   --->   Operation 122 'br' 'br_ln65' <Predicate = (sensors_read == 27)> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%write_ln64 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:64]   --->   Operation 123 'write' 'write_ln64' <Predicate = (sensors_read == 26)> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%write_ln64 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:64]   --->   Operation 124 'write' 'write_ln64' <Predicate = (sensors_read == 26)> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%br_ln64 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:64]   --->   Operation 125 'br' 'br_ln64' <Predicate = (sensors_read == 26)> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%write_ln63 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:63]   --->   Operation 126 'write' 'write_ln63' <Predicate = (sensors_read == 25)> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%write_ln63 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:63]   --->   Operation 127 'write' 'write_ln63' <Predicate = (sensors_read == 25)> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%br_ln63 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:63]   --->   Operation 128 'br' 'br_ln63' <Predicate = (sensors_read == 25)> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%write_ln62 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:62]   --->   Operation 129 'write' 'write_ln62' <Predicate = (sensors_read == 24)> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%write_ln62 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:62]   --->   Operation 130 'write' 'write_ln62' <Predicate = (sensors_read == 24)> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln62 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:62]   --->   Operation 131 'br' 'br_ln62' <Predicate = (sensors_read == 24)> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%write_ln60 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:60]   --->   Operation 132 'write' 'write_ln60' <Predicate = (sensors_read == 23)> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%write_ln60 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:60]   --->   Operation 133 'write' 'write_ln60' <Predicate = (sensors_read == 23)> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%br_ln60 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:60]   --->   Operation 134 'br' 'br_ln60' <Predicate = (sensors_read == 23)> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%write_ln59 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:59]   --->   Operation 135 'write' 'write_ln59' <Predicate = (sensors_read == 22)> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%write_ln59 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:59]   --->   Operation 136 'write' 'write_ln59' <Predicate = (sensors_read == 22)> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%br_ln59 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:59]   --->   Operation 137 'br' 'br_ln59' <Predicate = (sensors_read == 22)> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%write_ln58 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:58]   --->   Operation 138 'write' 'write_ln58' <Predicate = (sensors_read == 21)> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%write_ln58 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:58]   --->   Operation 139 'write' 'write_ln58' <Predicate = (sensors_read == 21)> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%br_ln58 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:58]   --->   Operation 140 'br' 'br_ln58' <Predicate = (sensors_read == 21)> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%write_ln57 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:57]   --->   Operation 141 'write' 'write_ln57' <Predicate = (sensors_read == 20)> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%write_ln57 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:57]   --->   Operation 142 'write' 'write_ln57' <Predicate = (sensors_read == 20)> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%br_ln57 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:57]   --->   Operation 143 'br' 'br_ln57' <Predicate = (sensors_read == 20)> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%write_ln56 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:56]   --->   Operation 144 'write' 'write_ln56' <Predicate = (sensors_read == 19)> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%write_ln56 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:56]   --->   Operation 145 'write' 'write_ln56' <Predicate = (sensors_read == 19)> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%br_ln56 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:56]   --->   Operation 146 'br' 'br_ln56' <Predicate = (sensors_read == 19)> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%write_ln55 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:55]   --->   Operation 147 'write' 'write_ln55' <Predicate = (sensors_read == 18)> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%write_ln55 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:55]   --->   Operation 148 'write' 'write_ln55' <Predicate = (sensors_read == 18)> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%br_ln55 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:55]   --->   Operation 149 'br' 'br_ln55' <Predicate = (sensors_read == 18)> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%write_ln54 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:54]   --->   Operation 150 'write' 'write_ln54' <Predicate = (sensors_read == 17)> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%write_ln54 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:54]   --->   Operation 151 'write' 'write_ln54' <Predicate = (sensors_read == 17)> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%br_ln54 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:54]   --->   Operation 152 'br' 'br_ln54' <Predicate = (sensors_read == 17)> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%write_ln53 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:53]   --->   Operation 153 'write' 'write_ln53' <Predicate = (sensors_read == 16)> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%write_ln53 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:53]   --->   Operation 154 'write' 'write_ln53' <Predicate = (sensors_read == 16)> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%br_ln53 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:53]   --->   Operation 155 'br' 'br_ln53' <Predicate = (sensors_read == 16)> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%write_ln51 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:51]   --->   Operation 156 'write' 'write_ln51' <Predicate = (sensors_read == 15)> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%write_ln51 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:51]   --->   Operation 157 'write' 'write_ln51' <Predicate = (sensors_read == 15)> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%br_ln51 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:51]   --->   Operation 158 'br' 'br_ln51' <Predicate = (sensors_read == 15)> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%write_ln50 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:50]   --->   Operation 159 'write' 'write_ln50' <Predicate = (sensors_read == 14)> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%write_ln50 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:50]   --->   Operation 160 'write' 'write_ln50' <Predicate = (sensors_read == 14)> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%br_ln50 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:50]   --->   Operation 161 'br' 'br_ln50' <Predicate = (sensors_read == 14)> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%write_ln49 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:49]   --->   Operation 162 'write' 'write_ln49' <Predicate = (sensors_read == 13)> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%write_ln49 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:49]   --->   Operation 163 'write' 'write_ln49' <Predicate = (sensors_read == 13)> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%br_ln49 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:49]   --->   Operation 164 'br' 'br_ln49' <Predicate = (sensors_read == 13)> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%write_ln48 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:48]   --->   Operation 165 'write' 'write_ln48' <Predicate = (sensors_read == 12)> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%write_ln48 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:48]   --->   Operation 166 'write' 'write_ln48' <Predicate = (sensors_read == 12)> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%br_ln48 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:48]   --->   Operation 167 'br' 'br_ln48' <Predicate = (sensors_read == 12)> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%write_ln47 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:47]   --->   Operation 168 'write' 'write_ln47' <Predicate = (sensors_read == 11)> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%write_ln47 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:47]   --->   Operation 169 'write' 'write_ln47' <Predicate = (sensors_read == 11)> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%br_ln47 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:47]   --->   Operation 170 'br' 'br_ln47' <Predicate = (sensors_read == 11)> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%write_ln46 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:46]   --->   Operation 171 'write' 'write_ln46' <Predicate = (sensors_read == 10)> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%write_ln46 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:46]   --->   Operation 172 'write' 'write_ln46' <Predicate = (sensors_read == 10)> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%br_ln46 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:46]   --->   Operation 173 'br' 'br_ln46' <Predicate = (sensors_read == 10)> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%write_ln45 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:45]   --->   Operation 174 'write' 'write_ln45' <Predicate = (sensors_read == 9)> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%write_ln45 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:45]   --->   Operation 175 'write' 'write_ln45' <Predicate = (sensors_read == 9)> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%br_ln45 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:45]   --->   Operation 176 'br' 'br_ln45' <Predicate = (sensors_read == 9)> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%write_ln44 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:44]   --->   Operation 177 'write' 'write_ln44' <Predicate = (sensors_read == 8)> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%write_ln44 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:44]   --->   Operation 178 'write' 'write_ln44' <Predicate = (sensors_read == 8)> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%br_ln44 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:44]   --->   Operation 179 'br' 'br_ln44' <Predicate = (sensors_read == 8)> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%write_ln42 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:42]   --->   Operation 180 'write' 'write_ln42' <Predicate = (sensors_read == 7)> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%write_ln42 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:42]   --->   Operation 181 'write' 'write_ln42' <Predicate = (sensors_read == 7)> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%br_ln42 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:42]   --->   Operation 182 'br' 'br_ln42' <Predicate = (sensors_read == 7)> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:41]   --->   Operation 183 'write' 'write_ln41' <Predicate = (sensors_read == 6)> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:41]   --->   Operation 184 'write' 'write_ln41' <Predicate = (sensors_read == 6)> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%br_ln41 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:41]   --->   Operation 185 'br' 'br_ln41' <Predicate = (sensors_read == 6)> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%write_ln40 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:40]   --->   Operation 186 'write' 'write_ln40' <Predicate = (sensors_read == 5)> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%write_ln40 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:40]   --->   Operation 187 'write' 'write_ln40' <Predicate = (sensors_read == 5)> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%br_ln40 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:40]   --->   Operation 188 'br' 'br_ln40' <Predicate = (sensors_read == 5)> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%write_ln39 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 80" [RobotLogicHLS/src/RobotLogic.c:39]   --->   Operation 189 'write' 'write_ln39' <Predicate = (sensors_read == 4)> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%write_ln39 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:39]   --->   Operation 190 'write' 'write_ln39' <Predicate = (sensors_read == 4)> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%br_ln39 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:39]   --->   Operation 191 'br' 'br_ln39' <Predicate = (sensors_read == 4)> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%write_ln38 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:38]   --->   Operation 192 'write' 'write_ln38' <Predicate = (sensors_read == 3)> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%write_ln38 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 180" [RobotLogicHLS/src/RobotLogic.c:38]   --->   Operation 193 'write' 'write_ln38' <Predicate = (sensors_read == 3)> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%br_ln38 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:38]   --->   Operation 194 'br' 'br_ln38' <Predicate = (sensors_read == 3)> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%write_ln37 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:37]   --->   Operation 195 'write' 'write_ln37' <Predicate = (sensors_read == 2)> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%write_ln37 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 120" [RobotLogicHLS/src/RobotLogic.c:37]   --->   Operation 196 'write' 'write_ln37' <Predicate = (sensors_read == 2)> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%br_ln37 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:37]   --->   Operation 197 'br' 'br_ln37' <Predicate = (sensors_read == 2)> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%write_ln36 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 180" [RobotLogicHLS/src/RobotLogic.c:36]   --->   Operation 198 'write' 'write_ln36' <Predicate = (sensors_read == 1)> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%write_ln36 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:36]   --->   Operation 199 'write' 'write_ln36' <Predicate = (sensors_read == 1)> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%br_ln36 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:36]   --->   Operation 200 'br' 'br_ln36' <Predicate = (sensors_read == 1)> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%write_ln35 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 120" [RobotLogicHLS/src/RobotLogic.c:35]   --->   Operation 201 'write' 'write_ln35' <Predicate = (sensors_read == 0)> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%write_ln35 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 80" [RobotLogicHLS/src/RobotLogic.c:35]   --->   Operation 202 'write' 'write_ln35' <Predicate = (sensors_read == 0)> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%br_ln35 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:35]   --->   Operation 203 'br' 'br_ln35' <Predicate = (sensors_read == 0)> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%write_ln108 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyLeft, i16 0" [RobotLogicHLS/src/RobotLogic.c:108]   --->   Operation 204 'write' 'write_ln108' <Predicate = (sensors_read != 0 & sensors_read != 1 & sensors_read != 2 & sensors_read != 3 & sensors_read != 4 & sensors_read != 5 & sensors_read != 6 & sensors_read != 7 & sensors_read != 8 & sensors_read != 9 & sensors_read != 10 & sensors_read != 11 & sensors_read != 12 & sensors_read != 13 & sensors_read != 14 & sensors_read != 15 & sensors_read != 16 & sensors_read != 17 & sensors_read != 18 & sensors_read != 19 & sensors_read != 20 & sensors_read != 21 & sensors_read != 22 & sensors_read != 23 & sensors_read != 24 & sensors_read != 25 & sensors_read != 26 & sensors_read != 27 & sensors_read != 28 & sensors_read != 29 & sensors_read != 30 & sensors_read != 31 & sensors_read != 32 & sensors_read != 33 & sensors_read != 34 & sensors_read != 35 & sensors_read != 36 & sensors_read != 37 & sensors_read != 38 & sensors_read != 39 & sensors_read != 40 & sensors_read != 41 & sensors_read != 42 & sensors_read != 43 & sensors_read != 44 & sensors_read != 45 & sensors_read != 46 & sensors_read != 47 & sensors_read != 48 & sensors_read != 49 & sensors_read != 50 & sensors_read != 51 & sensors_read != 52 & sensors_read != 53 & sensors_read != 54 & sensors_read != 55 & sensors_read != 56 & sensors_read != 57 & sensors_read != 58 & sensors_read != 59 & sensors_read != 60 & sensors_read != 61 & sensors_read != 62 & sensors_read != 63)> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%write_ln108 = write void @_ssdm_op_Write.ap_none.i16P0A, i16 %dutyRight, i16 0" [RobotLogicHLS/src/RobotLogic.c:108]   --->   Operation 205 'write' 'write_ln108' <Predicate = (sensors_read != 0 & sensors_read != 1 & sensors_read != 2 & sensors_read != 3 & sensors_read != 4 & sensors_read != 5 & sensors_read != 6 & sensors_read != 7 & sensors_read != 8 & sensors_read != 9 & sensors_read != 10 & sensors_read != 11 & sensors_read != 12 & sensors_read != 13 & sensors_read != 14 & sensors_read != 15 & sensors_read != 16 & sensors_read != 17 & sensors_read != 18 & sensors_read != 19 & sensors_read != 20 & sensors_read != 21 & sensors_read != 22 & sensors_read != 23 & sensors_read != 24 & sensors_read != 25 & sensors_read != 26 & sensors_read != 27 & sensors_read != 28 & sensors_read != 29 & sensors_read != 30 & sensors_read != 31 & sensors_read != 32 & sensors_read != 33 & sensors_read != 34 & sensors_read != 35 & sensors_read != 36 & sensors_read != 37 & sensors_read != 38 & sensors_read != 39 & sensors_read != 40 & sensors_read != 41 & sensors_read != 42 & sensors_read != 43 & sensors_read != 44 & sensors_read != 45 & sensors_read != 46 & sensors_read != 47 & sensors_read != 48 & sensors_read != 49 & sensors_read != 50 & sensors_read != 51 & sensors_read != 52 & sensors_read != 53 & sensors_read != 54 & sensors_read != 55 & sensors_read != 56 & sensors_read != 57 & sensors_read != 58 & sensors_read != 59 & sensors_read != 60 & sensors_read != 61 & sensors_read != 62 & sensors_read != 63)> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%br_ln109 = br void %sw.epilog" [RobotLogicHLS/src/RobotLogic.c:109]   --->   Operation 206 'br' 'br_ln109' <Predicate = (sensors_read != 0 & sensors_read != 1 & sensors_read != 2 & sensors_read != 3 & sensors_read != 4 & sensors_read != 5 & sensors_read != 6 & sensors_read != 7 & sensors_read != 8 & sensors_read != 9 & sensors_read != 10 & sensors_read != 11 & sensors_read != 12 & sensors_read != 13 & sensors_read != 14 & sensors_read != 15 & sensors_read != 16 & sensors_read != 17 & sensors_read != 18 & sensors_read != 19 & sensors_read != 20 & sensors_read != 21 & sensors_read != 22 & sensors_read != 23 & sensors_read != 24 & sensors_read != 25 & sensors_read != 26 & sensors_read != 27 & sensors_read != 28 & sensors_read != 29 & sensors_read != 30 & sensors_read != 31 & sensors_read != 32 & sensors_read != 33 & sensors_read != 34 & sensors_read != 35 & sensors_read != 36 & sensors_read != 37 & sensors_read != 38 & sensors_read != 39 & sensors_read != 40 & sensors_read != 41 & sensors_read != 42 & sensors_read != 43 & sensors_read != 44 & sensors_read != 45 & sensors_read != 46 & sensors_read != 47 & sensors_read != 48 & sensors_read != 49 & sensors_read != 50 & sensors_read != 51 & sensors_read != 52 & sensors_read != 53 & sensors_read != 54 & sensors_read != 55 & sensors_read != 56 & sensors_read != 57 & sensors_read != 58 & sensors_read != 59 & sensors_read != 60 & sensors_read != 61 & sensors_read != 62 & sensors_read != 63)> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%ret_ln110 = ret" [RobotLogicHLS/src/RobotLogic.c:110]   --->   Operation 207 'ret' 'ret_ln110' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 1
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_none:ce=0
+Port [ dutyLeft]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ dutyRight]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ sensors]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+spectopmodule_ln16 (spectopmodule) [ 00]
+specinterface_ln16 (specinterface) [ 00]
+specbitsmap_ln0    (specbitsmap  ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+specbitsmap_ln0    (specbitsmap  ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+specbitsmap_ln0    (specbitsmap  ) [ 00]
+specinterface_ln0  (specinterface) [ 00]
+sensors_read       (read         ) [ 01]
+switch_ln34        (switch       ) [ 00]
+write_ln105        (write        ) [ 00]
+write_ln105        (write        ) [ 00]
+br_ln105           (br           ) [ 00]
+write_ln104        (write        ) [ 00]
+write_ln104        (write        ) [ 00]
+br_ln104           (br           ) [ 00]
+write_ln103        (write        ) [ 00]
+write_ln103        (write        ) [ 00]
+br_ln103           (br           ) [ 00]
+write_ln102        (write        ) [ 00]
+write_ln102        (write        ) [ 00]
+br_ln102           (br           ) [ 00]
+write_ln101        (write        ) [ 00]
+write_ln101        (write        ) [ 00]
+br_ln101           (br           ) [ 00]
+write_ln100        (write        ) [ 00]
+write_ln100        (write        ) [ 00]
+br_ln100           (br           ) [ 00]
+write_ln99         (write        ) [ 00]
+write_ln99         (write        ) [ 00]
+br_ln99            (br           ) [ 00]
+write_ln98         (write        ) [ 00]
+write_ln98         (write        ) [ 00]
+br_ln98            (br           ) [ 00]
+write_ln96         (write        ) [ 00]
+write_ln96         (write        ) [ 00]
+br_ln96            (br           ) [ 00]
+write_ln95         (write        ) [ 00]
+write_ln95         (write        ) [ 00]
+br_ln95            (br           ) [ 00]
+write_ln94         (write        ) [ 00]
+write_ln94         (write        ) [ 00]
+br_ln94            (br           ) [ 00]
+write_ln93         (write        ) [ 00]
+write_ln93         (write        ) [ 00]
+br_ln93            (br           ) [ 00]
+write_ln92         (write        ) [ 00]
+write_ln92         (write        ) [ 00]
+br_ln92            (br           ) [ 00]
+write_ln91         (write        ) [ 00]
+write_ln91         (write        ) [ 00]
+br_ln91            (br           ) [ 00]
+write_ln90         (write        ) [ 00]
+write_ln90         (write        ) [ 00]
+br_ln90            (br           ) [ 00]
+write_ln89         (write        ) [ 00]
+write_ln89         (write        ) [ 00]
+br_ln89            (br           ) [ 00]
+write_ln87         (write        ) [ 00]
+write_ln87         (write        ) [ 00]
+br_ln87            (br           ) [ 00]
+write_ln86         (write        ) [ 00]
+write_ln86         (write        ) [ 00]
+br_ln86            (br           ) [ 00]
+write_ln85         (write        ) [ 00]
+write_ln85         (write        ) [ 00]
+br_ln85            (br           ) [ 00]
+write_ln84         (write        ) [ 00]
+write_ln84         (write        ) [ 00]
+br_ln84            (br           ) [ 00]
+write_ln83         (write        ) [ 00]
+write_ln83         (write        ) [ 00]
+br_ln83            (br           ) [ 00]
+write_ln82         (write        ) [ 00]
+write_ln82         (write        ) [ 00]
+br_ln82            (br           ) [ 00]
+write_ln81         (write        ) [ 00]
+write_ln81         (write        ) [ 00]
+br_ln81            (br           ) [ 00]
+write_ln80         (write        ) [ 00]
+write_ln80         (write        ) [ 00]
+br_ln80            (br           ) [ 00]
+write_ln78         (write        ) [ 00]
+write_ln78         (write        ) [ 00]
+br_ln78            (br           ) [ 00]
+write_ln77         (write        ) [ 00]
+write_ln77         (write        ) [ 00]
+br_ln77            (br           ) [ 00]
+write_ln76         (write        ) [ 00]
+write_ln76         (write        ) [ 00]
+br_ln76            (br           ) [ 00]
+write_ln75         (write        ) [ 00]
+write_ln75         (write        ) [ 00]
+br_ln75            (br           ) [ 00]
+write_ln74         (write        ) [ 00]
+write_ln74         (write        ) [ 00]
+br_ln74            (br           ) [ 00]
+write_ln73         (write        ) [ 00]
+write_ln73         (write        ) [ 00]
+br_ln73            (br           ) [ 00]
+write_ln72         (write        ) [ 00]
+write_ln72         (write        ) [ 00]
+br_ln72            (br           ) [ 00]
+write_ln71         (write        ) [ 00]
+write_ln71         (write        ) [ 00]
+br_ln71            (br           ) [ 00]
+write_ln69         (write        ) [ 00]
+write_ln69         (write        ) [ 00]
+br_ln69            (br           ) [ 00]
+write_ln68         (write        ) [ 00]
+write_ln68         (write        ) [ 00]
+br_ln68            (br           ) [ 00]
+write_ln67         (write        ) [ 00]
+write_ln67         (write        ) [ 00]
+br_ln67            (br           ) [ 00]
+write_ln66         (write        ) [ 00]
+write_ln66         (write        ) [ 00]
+br_ln66            (br           ) [ 00]
+write_ln65         (write        ) [ 00]
+write_ln65         (write        ) [ 00]
+br_ln65            (br           ) [ 00]
+write_ln64         (write        ) [ 00]
+write_ln64         (write        ) [ 00]
+br_ln64            (br           ) [ 00]
+write_ln63         (write        ) [ 00]
+write_ln63         (write        ) [ 00]
+br_ln63            (br           ) [ 00]
+write_ln62         (write        ) [ 00]
+write_ln62         (write        ) [ 00]
+br_ln62            (br           ) [ 00]
+write_ln60         (write        ) [ 00]
+write_ln60         (write        ) [ 00]
+br_ln60            (br           ) [ 00]
+write_ln59         (write        ) [ 00]
+write_ln59         (write        ) [ 00]
+br_ln59            (br           ) [ 00]
+write_ln58         (write        ) [ 00]
+write_ln58         (write        ) [ 00]
+br_ln58            (br           ) [ 00]
+write_ln57         (write        ) [ 00]
+write_ln57         (write        ) [ 00]
+br_ln57            (br           ) [ 00]
+write_ln56         (write        ) [ 00]
+write_ln56         (write        ) [ 00]
+br_ln56            (br           ) [ 00]
+write_ln55         (write        ) [ 00]
+write_ln55         (write        ) [ 00]
+br_ln55            (br           ) [ 00]
+write_ln54         (write        ) [ 00]
+write_ln54         (write        ) [ 00]
+br_ln54            (br           ) [ 00]
+write_ln53         (write        ) [ 00]
+write_ln53         (write        ) [ 00]
+br_ln53            (br           ) [ 00]
+write_ln51         (write        ) [ 00]
+write_ln51         (write        ) [ 00]
+br_ln51            (br           ) [ 00]
+write_ln50         (write        ) [ 00]
+write_ln50         (write        ) [ 00]
+br_ln50            (br           ) [ 00]
+write_ln49         (write        ) [ 00]
+write_ln49         (write        ) [ 00]
+br_ln49            (br           ) [ 00]
+write_ln48         (write        ) [ 00]
+write_ln48         (write        ) [ 00]
+br_ln48            (br           ) [ 00]
+write_ln47         (write        ) [ 00]
+write_ln47         (write        ) [ 00]
+br_ln47            (br           ) [ 00]
+write_ln46         (write        ) [ 00]
+write_ln46         (write        ) [ 00]
+br_ln46            (br           ) [ 00]
+write_ln45         (write        ) [ 00]
+write_ln45         (write        ) [ 00]
+br_ln45            (br           ) [ 00]
+write_ln44         (write        ) [ 00]
+write_ln44         (write        ) [ 00]
+br_ln44            (br           ) [ 00]
+write_ln42         (write        ) [ 00]
+write_ln42         (write        ) [ 00]
+br_ln42            (br           ) [ 00]
+write_ln41         (write        ) [ 00]
+write_ln41         (write        ) [ 00]
+br_ln41            (br           ) [ 00]
+write_ln40         (write        ) [ 00]
+write_ln40         (write        ) [ 00]
+br_ln40            (br           ) [ 00]
+write_ln39         (write        ) [ 00]
+write_ln39         (write        ) [ 00]
+br_ln39            (br           ) [ 00]
+write_ln38         (write        ) [ 00]
+write_ln38         (write        ) [ 00]
+br_ln38            (br           ) [ 00]
+write_ln37         (write        ) [ 00]
+write_ln37         (write        ) [ 00]
+br_ln37            (br           ) [ 00]
+write_ln36         (write        ) [ 00]
+write_ln36         (write        ) [ 00]
+br_ln36            (br           ) [ 00]
+write_ln35         (write        ) [ 00]
+write_ln35         (write        ) [ 00]
+br_ln35            (br           ) [ 00]
+write_ln108        (write        ) [ 00]
+write_ln108        (write        ) [ 00]
+br_ln109           (br           ) [ 00]
+ret_ln110          (ret          ) [ 00]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="dutyLeft">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dutyLeft"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="dutyRight">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dutyRight"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="sensors">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sensors"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_none.i8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1001" name="const_74">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1001" name="const_76">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1001" name="const_78">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1001" name="const_80">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1001" name="const_82">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1001" name="const_84">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1001" name="const_86">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1001" name="const_88">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1001" name="const_90">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1001" name="const_92">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1001" name="const_94">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1001" name="const_96">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1001" name="const_98">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1001" name="const_100">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1001" name="const_102">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1001" name="const_104">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1001" name="const_106">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1001" name="const_108">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1001" name="const_110">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1001" name="const_112">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1001" name="const_118">
+<pin_list>
+<pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="120" class="1001" name="const_120">
+<pin_list>
+<pin id="121" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="122" class="1001" name="const_122">
+<pin_list>
+<pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="124" class="1001" name="const_124">
+<pin_list>
+<pin id="125" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="126" class="1001" name="const_126">
+<pin_list>
+<pin id="127" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="128" class="1001" name="const_128">
+<pin_list>
+<pin id="129" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="130" class="1001" name="const_130">
+<pin_list>
+<pin id="131" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="132" class="1001" name="const_132">
+<pin_list>
+<pin id="133" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="134" class="1001" name="const_134">
+<pin_list>
+<pin id="135" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="136" class="1001" name="const_136">
+<pin_list>
+<pin id="137" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="138" class="1001" name="const_138">
+<pin_list>
+<pin id="139" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="140" class="1001" name="const_140">
+<pin_list>
+<pin id="141" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="142" class="1001" name="const_142">
+<pin_list>
+<pin id="143" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="144" class="1001" name="const_144">
+<pin_list>
+<pin id="145" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="146" class="1001" name="const_146">
+<pin_list>
+<pin id="147" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="148" class="1001" name="const_148">
+<pin_list>
+<pin id="149" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="150" class="1001" name="const_150">
+<pin_list>
+<pin id="151" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="152" class="1001" name="const_152">
+<pin_list>
+<pin id="153" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="154" class="1001" name="const_154">
+<pin_list>
+<pin id="155" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_none.i16P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="156" class="1001" name="const_156">
+<pin_list>
+<pin id="157" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="158" class="1001" name="const_158">
+<pin_list>
+<pin id="159" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="160" class="1001" name="const_160">
+<pin_list>
+<pin id="161" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="162" class="1001" name="const_162">
+<pin_list>
+<pin id="163" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="164" class="1004" name="sensors_read_read_fu_164">
+<pin_list>
+<pin id="165" dir="0" index="0" bw="8" slack="0"/>
+<pin id="166" dir="0" index="1" bw="8" slack="0"/>
+<pin id="167" dir="1" index="2" bw="8" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="sensors_read/1 "/>
+</bind>
+</comp>
+
+<comp id="170" class="1004" name="grp_write_fu_170">
+<pin_list>
+<pin id="171" dir="0" index="0" bw="0" slack="0"/>
+<pin id="172" dir="0" index="1" bw="16" slack="0"/>
+<pin id="173" dir="0" index="2" bw="9" slack="0"/>
+<pin id="174" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln105/1 write_ln104/1 write_ln103/1 write_ln102/1 write_ln101/1 write_ln100/1 write_ln99/1 write_ln98/1 write_ln96/1 write_ln95/1 write_ln94/1 write_ln93/1 write_ln92/1 write_ln91/1 write_ln90/1 write_ln89/1 write_ln87/1 write_ln86/1 write_ln85/1 write_ln84/1 write_ln83/1 write_ln82/1 write_ln81/1 write_ln80/1 write_ln78/1 write_ln77/1 write_ln76/1 write_ln75/1 write_ln74/1 write_ln73/1 write_ln72/1 write_ln71/1 write_ln69/1 write_ln68/1 write_ln67/1 write_ln66/1 write_ln65/1 write_ln64/1 write_ln63/1 write_ln62/1 write_ln60/1 write_ln59/1 write_ln58/1 write_ln57/1 write_ln56/1 write_ln55/1 write_ln54/1 write_ln53/1 write_ln51/1 write_ln50/1 write_ln49/1 write_ln48/1 write_ln47/1 write_ln46/1 write_ln45/1 write_ln44/1 write_ln42/1 write_ln41/1 write_ln40/1 write_ln39/1 write_ln38/1 write_ln37/1 write_ln36/1 write_ln35/1 write_ln108/1 "/>
+</bind>
+</comp>
+
+<comp id="178" class="1004" name="grp_write_fu_178">
+<pin_list>
+<pin id="179" dir="0" index="0" bw="0" slack="0"/>
+<pin id="180" dir="0" index="1" bw="16" slack="0"/>
+<pin id="181" dir="0" index="2" bw="9" slack="0"/>
+<pin id="182" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln105/1 write_ln104/1 write_ln103/1 write_ln102/1 write_ln101/1 write_ln100/1 write_ln99/1 write_ln98/1 write_ln96/1 write_ln95/1 write_ln94/1 write_ln93/1 write_ln92/1 write_ln91/1 write_ln90/1 write_ln89/1 write_ln87/1 write_ln86/1 write_ln85/1 write_ln84/1 write_ln83/1 write_ln82/1 write_ln81/1 write_ln80/1 write_ln78/1 write_ln77/1 write_ln76/1 write_ln75/1 write_ln74/1 write_ln73/1 write_ln72/1 write_ln71/1 write_ln69/1 write_ln68/1 write_ln67/1 write_ln66/1 write_ln65/1 write_ln64/1 write_ln63/1 write_ln62/1 write_ln60/1 write_ln59/1 write_ln58/1 write_ln57/1 write_ln56/1 write_ln55/1 write_ln54/1 write_ln53/1 write_ln51/1 write_ln50/1 write_ln49/1 write_ln48/1 write_ln47/1 write_ln46/1 write_ln45/1 write_ln44/1 write_ln42/1 write_ln41/1 write_ln40/1 write_ln39/1 write_ln38/1 write_ln37/1 write_ln36/1 write_ln35/1 write_ln108/1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="168"><net_src comp="24" pin="0"/><net_sink comp="164" pin=0"/></net>
+
+<net id="169"><net_src comp="4" pin="0"/><net_sink comp="164" pin=1"/></net>
+
+<net id="175"><net_src comp="154" pin="0"/><net_sink comp="170" pin=0"/></net>
+
+<net id="176"><net_src comp="0" pin="0"/><net_sink comp="170" pin=1"/></net>
+
+<net id="177"><net_src comp="156" pin="0"/><net_sink comp="170" pin=2"/></net>
+
+<net id="183"><net_src comp="154" pin="0"/><net_sink comp="178" pin=0"/></net>
+
+<net id="184"><net_src comp="2" pin="0"/><net_sink comp="178" pin=1"/></net>
+
+<net id="185"><net_src comp="156" pin="0"/><net_sink comp="178" pin=2"/></net>
+
+<net id="186"><net_src comp="158" pin="0"/><net_sink comp="170" pin=2"/></net>
+
+<net id="187"><net_src comp="160" pin="0"/><net_sink comp="178" pin=2"/></net>
+
+<net id="188"><net_src comp="162" pin="0"/><net_sink comp="170" pin=2"/></net>
+
+<net id="189"><net_src comp="158" pin="0"/><net_sink comp="178" pin=2"/></net>
+
+<net id="190"><net_src comp="160" pin="0"/><net_sink comp="170" pin=2"/></net>
+
+<net id="191"><net_src comp="162" pin="0"/><net_sink comp="178" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: dutyLeft | {1 }
+	Port: dutyRight | {1 }
+ - Input state : 
+	Port: robotControl : sensors | {1 }
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------|
+| Operation|      Functional Unit     |
+|----------|--------------------------|
+|   read   | sensors_read_read_fu_164 |
+|----------|--------------------------|
+|   write  |     grp_write_fu_170     |
+|          |     grp_write_fu_178     |
+|----------|--------------------------|
+|   Total  |                          |
+|----------|--------------------------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_write_fu_170 |  p2  |   4  |   9  |   36   ||    9    |
+| grp_write_fu_178 |  p2  |   4  |   9  |   36   ||    9    |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   72   || 3.34971 ||    18   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |  Delay |   LUT  |
++-----------+--------+--------+
+|  Function |    -   |    -   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    3   |   18   |
+|  Register |    -   |    -   |
++-----------+--------+--------+
+|   Total   |    3   |   18   |
++-----------+--------+--------+

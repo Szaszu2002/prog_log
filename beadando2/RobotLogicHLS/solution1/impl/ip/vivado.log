@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu May  9 14:46:19 2024
+# Process ID: 1744
+# Current directory: C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/impl/ip/vivado.log
+# Journal file: C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/impl/ip\vivado.jou
+# Running On: RRF-PC-153, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 16853 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 448.664 ; gain = 156.477
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu May  9 14:46:27 2024...

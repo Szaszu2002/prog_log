@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "robotControl",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "robotControl"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "robotControl",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "robotControl"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/au087680/Desktop/-p/RobotLogicHLS/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

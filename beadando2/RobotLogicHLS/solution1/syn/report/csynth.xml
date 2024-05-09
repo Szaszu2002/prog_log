@@ -1,0 +1,228 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>artix7</ProductFamily>
+        <Part>xc7a100t-csg324-1</Part>
+        <TopModelName>robotControl</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>1.923</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <LUT>42</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <FF>0</FF>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>270</BRAM_18K>
+            <DSP>240</DSP>
+            <FF>126800</FF>
+            <LUT>63400</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>dutyLeft</name>
+            <Object>dutyLeft</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>dutyRight</name>
+            <Object>dutyRight</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sensors</name>
+            <Object>sensors</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>uint</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="1">
+            <ModuleName>robotControl</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>robotControl</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.923</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <LUT>42</LUT>
+                    <AVAIL_LUT>63400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>270</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>240</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>0</FF>
+                    <AVAIL_FF>126800</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export output="C:/Users/au087680/Desktop/-p/RobotLogicHLS/IP"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="dutyLeft" index="0" direction="out" srcType="unsigned short*" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="dutyLeft" name="dutyLeft" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dutyRight" index="1" direction="out" srcType="unsigned short*" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="dutyRight" name="dutyRight" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="sensors" index="2" direction="in" srcType="unsigned char" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="sensors" name="sensors" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="dutyLeft" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="dutyLeft">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>dutyLeft</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="dutyLeft"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="dutyRight" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="dutyRight">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>dutyRight</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="dutyRight"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="sensors" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="sensors">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>sensors</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="sensors"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="dutyLeft">ap_none, out, 16</column>
+                    <column name="dutyRight">ap_none, out, 16</column>
+                    <column name="sensors">ap_none, in, 8</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="dutyLeft">out, unsigned short*</column>
+                    <column name="dutyRight">out, unsigned short*</column>
+                    <column name="sensors">in, unsigned char</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="dutyLeft">dutyLeft, port</column>
+                    <column name="dutyRight">dutyRight, port</column>
+                    <column name="sensors">sensors, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="interface" location="RobotLogicHLS/src/RobotLogic.c:17" status="valid" parentFunction="robotcontrol" variable="" isDirective="0" options="ap_ctrl_none port = return"/>
+        <Pragma type="interface" location="RobotLogicHLS/src/RobotLogic.c:18" status="valid" parentFunction="robotcontrol" variable="" isDirective="0" options="ap_none port = dutyLeft"/>
+        <Pragma type="interface" location="RobotLogicHLS/src/RobotLogic.c:19" status="valid" parentFunction="robotcontrol" variable="" isDirective="0" options="ap_none port = dutyRight"/>
+        <Pragma type="interface" location="RobotLogicHLS/src/RobotLogic.c:20" status="valid" parentFunction="robotcontrol" variable="" isDirective="0" options="ap_none port = sensors"/>
+    </PragmaReport>
+</profile>
+

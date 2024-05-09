@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 67,
+    "calls": "",
+    "file": "RobotLogic.c",
+    "fileloc": 16,
+    "instructions": 202,
+    "name": "robotControl",
+    "stores": {
+      "T": 130
+    },
+    "total_instructions": 202
+  }
+}
